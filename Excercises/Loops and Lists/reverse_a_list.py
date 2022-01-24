@@ -6,7 +6,7 @@
 my_list = [8, 2, -1, "Python!", "Hello"]
 
 # ניצור רשימה חדשה - היא תהיה הפתרון של השאלה:
-ans = []g
+ans = []
 for i in range(len(my_list)):
     ans.append(my_list[-1-i])
 
