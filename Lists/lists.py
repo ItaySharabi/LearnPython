@@ -4,12 +4,13 @@
 # רשימה בפייתון זה אובייקט שמכיל כל מיני טיפוסים שונים של מידע.
 
 # דוגמאות ליצור רשימה ריקה
+# Python program to demonstrate len(object)
 lst = []
-my_other_list = list()
-
-# דוגמאות לאיתחול רשימה לא ריקה
-lst = [9, -4, "Shalom", ((9*4)/3)]
-my_other_list = list(["Shalom", "Olam", 6])
+print(f"The length of lst is: len(lst) = {len(lst)}")
+lst.append("Hello")
+lst.append("Python")
+lst.append("Programmers!")
+print(f"The length of lst is: len(lst) = {len(lst)}")
 
 # --------------------------------------------------------
 my_list = []
@@ -17,14 +18,12 @@ my_list = []
 # פונקציית הוספה לרשימה:
 my_list.append("Hello, world!")
 my_list.append(6)
-my_list.append(my_other_list)
+my_list.append(lst)
 
 # פונקציית מחיקה מרשימה:
 my_list.pop()   # מוחק את האיבר האחרון ברשימה אם לא מציינים אחרת
 my_list.pop(1)  # מוחק את האיבר במיקום שצויין
 my_list.pop(-1) # -1 זה האינדקס הראשון מהסוף
-
-# print(my_list)
 
 # עוד פונקציות שימושיות על רשימות בפייתון:
 numbers = [1, 2, 3, 4, 5]
@@ -34,7 +33,7 @@ numbers.sort(reverse=False) # ממיינים מגדול לקטן
 # 2:
 numbers.reverse() # להפוך את סדר האיברים ברשימה
 # 3:
-numbers.count(-1) # נספור את מספר האיברים
+numbers.count(-1) # נספור את מספר המופעים של (1-) בתוך הרשימה
 
 # איך "רצים" על רשימות?
 
@@ -44,7 +43,7 @@ for element in numbers:
 
 # While loops: Harder
 i = 0
-max_index = len(numbers) - 1 # למה פחות 1? כי אינדקסים מתחילים מ-0.
+max_index = len(numbers) - 1
 
 while i <= max_index:
     print(numbers[i])
@@ -55,4 +54,3 @@ i = 0
 max_index = len(numbers)
 while i < max_index:
     i += 1
-
