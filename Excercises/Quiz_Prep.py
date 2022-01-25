@@ -78,6 +78,7 @@ print(f"len(lst) = {len(lst)}")
 
 # ---------------------------------------------------------------------
 
+# Extra:
 size = int(input("Please enter list size: "))
 my_list = []
 
