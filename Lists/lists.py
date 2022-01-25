@@ -6,11 +6,11 @@
 # דוגמאות ליצור רשימה ריקה
 # Python program to demonstrate len(object)
 lst = []
-print(f"The length of lst is: len(lst) = {len(lst)}")
+# print(f"The length of lst is: len(lst) = {len(lst)}")
 lst.append("Hello")
 lst.append("Python")
 lst.append("Programmers!")
-print(f"The length of lst is: len(lst) = {len(lst)}")
+# print(f"The length of lst is: len(lst) = {len(lst)}")
 
 # --------------------------------------------------------
 my_list = []
@@ -25,8 +25,8 @@ my_list.pop()   # מוחק את האיבר האחרון ברשימה אם לא �
 my_list.pop(1)  # מוחק את האיבר במיקום שצויין
 my_list.pop(-1) # -1 זה האינדקס הראשון מהסוף
 
-# עוד פונקציות שימושיות על רשימות בפייתון:
-numbers = [1, 2, 3, 4, 5]
+# # עוד פונקציות שימושיות על רשימות בפייתון:
+numbers = [100, -123, "Hello world!"]
 # 1:
 numbers.sort() # ממיינים מקטן לגדול
 numbers.sort(reverse=False) # ממיינים מגדול לקטן
@@ -38,8 +38,18 @@ numbers.count(-1) # נספור את מספר המופעים של (1-) בתוך �
 # איך "רצים" על רשימות?
 
 # For loops: Easier
-for element in numbers:
-    print(element)
+for david in numbers: # כשרצים על רשימה, בכל פעם מקבלים איבר מהרשימה לתוך המשתנה של הלולאה
+    # במקרה שלנו - david
+    print(david)
+
+for i in numbers:
+    print(i)
+
+# numbers[0, 1, ..., 29]
+i = len(numbers) - 1
+while i > 0:
+    print(numbers[i])
+    i -= 1
 
 # While loops: Harder
 i = 0
