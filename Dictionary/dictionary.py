@@ -6,10 +6,10 @@
 print("\n-----------------------------------------\n")
 
 # How to create a dictionary?
-# my_map = {}                             # Empty list
-# my_map = {"key1": "value1", "key2": 30} # Initialized list
-my_map = dict(a=1, b=2, c=3, d=4)  # Python's built-in function to create lists
-print(f"my_map = {my_map}")
+# d = {}                             # Empty list
+# my_dictionary = {"key1": "value1", "key2": 30} # Initialized list
+dictionary = dict(a=1, b=2, c=3, d=4)  # Python's built-in function to create lists
+print(f"my_map = {dictionary}")
 
 print("\n-----------------------------------------\n")
 
@@ -17,32 +17,33 @@ print("\n-----------------------------------------\n")
 # Old fashion access operator ([]) - Just specify the key. Incorrect keys lead to errors!
 # print(x[0]) # ERROR! There is no key `0`. So a KeyError is thrown!
 print("Access values: ")
-print(f"Value: {my_map['a']}")
-print(f"Value: {my_map['b']}")
-print(f"Value: {my_map['c']}")
-print(f"Value: {my_map['d']}")
+print(f"Value: {dictionary.get('a')}")
+print(f"Value: {dictionary['b']}")
+print(f"Value: {dictionary.get('c')}")
+print(f"Value: {dictionary['d']}")
+print(f"Value: {dictionary.get('Some key that was never in the dictionary')}")
 
 print("\n-----------------------------------------\n")
 # For loops using the python keyword `in`:
 
 # Iterate over keys:
-for x in my_map:  # same as .keys()
+for x in dictionary:  # same as .keys()
     print(f"Key: {x}")
 
-for x in my_map.keys():
+for x in dictionary.keys():
     print(f"Key: {x}")
 # you can use a dictionary method .keys() or .values()
 # to make x iterate over keys or values accordingly.
 
 # Iterate over both keys and their values at the same time:
-for x in my_map.values():
+for x in dictionary.values():
     print(f"Value: {x}")
 
 print("\n-----------------------------------------\n")
 
 # You can modify values in a dictionary:
-my_map['a'] = 123
-print(f"my_map[`a`] = {my_map['a']}")
+dictionary['a'] = 123
+print(f"my_map[`a`] = {dictionary['a']}")
 
 print("\n-----------------------------------------\n")
 
