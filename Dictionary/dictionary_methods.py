@@ -9,8 +9,9 @@ student = {
 }
 
 print(f"student = {student}")
-# Access operators:
 
+
+# Access operators:
 # [] operator:
 name = student['name']
 print(f'name = {name}')
@@ -24,6 +25,8 @@ print(f"age = {age}")
 # age = student['Age'] # KeyError - The key is not found and the program is stopped!
 
 print("\n-----------------------------------------\n")
+# How many keys does that student object has?
+print(f"len(student) -> {len(student)}\n")
 
 # Find if a key exists in the dictionary:
 print(f"Is `name` a key in our dictionary?")
@@ -32,7 +35,6 @@ print(f"Is `English grade` a key in our dictionary?")
 print(f"print(`English grade` in student) --> {'English grade' in student}")
 
 print("\n-----------------------------------------\n")
-
 
 # Adding to dictionaries:
 student['Computer Science grade'] = 95
