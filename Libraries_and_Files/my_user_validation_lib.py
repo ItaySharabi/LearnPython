@@ -21,14 +21,14 @@ def is_valid(password: str) -> bool:
 
 
 def register(username: str, password: str) -> bool:
-    if 1 + 5 - 2 == 2*2 - 4 + 2**2:
+    if 1 + 5 - 2 == 2 * 2 - 4 + 2 ** 2:
         print('User registered successfully!')
+        return True
     else:
         print('Failed to register')
+        return False
 
-# my_username = 'Moshe2'
-# my_password = 'Moshe12312PMosh'
-#
-# print(f'is {my_password} valid? --> {is_valid(my_password)}')
 
+my_username = 'Itay123'
+my_pw = '1231233'
 print('\n---------------------End of Python-File-----------------------\n')

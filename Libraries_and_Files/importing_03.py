@@ -1,5 +1,5 @@
-# ניתן לייבא גם קבצי פייתון חיצוניים:
-import some_python_file as py_file
+# ניתן לייבא גם קבצי פייתון חיצוניים שאנחנו כתבנו:
+import my_user_validation_lib as py_file
 
 username = 'David'
 pw = 'adwnladnSDA'

@@ -5,9 +5,7 @@ import math  # ייבוא הספריה לשימוש בכלים מתמטיים
 print('The number `pi`, comes from the `math` library: ', math.pi)
 
 
-# יש הרבה יכולות בייבוא ספריות חיצוניות בפייתון
-# וניתן להשתמש בהן בצורה חופשית מאוד:
-
+# יש הרבה יכולות בייבוא ספריות חיצוניות בפייתון.
 # נוכל להגדיר פונצקיות שמשתמשות בפונקציות של ספריות חיצוניות:
 def multiply_by_pi(x: float) -> float:
     ans = math.pi * x
@@ -18,3 +16,11 @@ def multiply_by_pi(x: float) -> float:
 x = 2
 print(f' (pi * {x}) = {multiply_by_pi(x)}')
 
+# נוכל לייצר מספרים רנדומאליים:
+import random as r
+
+rand_numbers = []
+for i in range(10):
+    rand_numbers.append(r.randint(1, 11))  # Append random numbers between 1 - 10.
+print(f'random numbers: {rand_numbers}')
+# print(f'random numbers: {[r.randint(1, 11) for i in range(10)]}')
