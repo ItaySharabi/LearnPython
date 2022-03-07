@@ -3,8 +3,8 @@ from tkinter import ttk
 from tkinter import Tk
 
 root = Tk()
-
-frm = ttk.Frame(root, padding=10)
+# root.geometry('400x400')
+frm = ttk.Frame(master=root, padding=10)
 frm.grid(rows=3, columns=3)
 
 ttk.Label(master=frm, text='Enter your name: ').grid(row=0, column=0)
