@@ -1,13 +1,20 @@
 from tkinter import *
 from tkinter import messagebox
 
+'''
+@author: Itay Sharabi
+This is a TicTacToe - Single Player - python game.
+Coding Challenge:
+Create A.I. that plays against the user!
+'''
+
 
 def check_win():
     print(f'Checking for a win')
     global count, turn
     if count >= 9:
         messagebox.showinfo("Game is over", "No more possible moves...\nRestarting...")
-        restart(game_window)
+        restart(window)
     # Add all winning situation conditions here:
     # ...
 
@@ -26,9 +33,9 @@ def on_click(btn):
 
 def restart(window):
     global turn, count
-    create_buttons(window)
+    create_buttons(game_frame)
     turn = True  # if turn == True, then it is Player 1's turn
-    count = 0    # count number of moves (Maximum 9)
+    count = 0  # count number of moves (Maximum 9)
 
 
 def create_buttons(window):
@@ -69,16 +76,26 @@ def create_buttons(window):
 
 # כאן מתחיל הקוד
 if __name__ == '__main__':
-    game_window = Tk()
+    window = Tk()
 
     # נגדיר את גודל החלון 576 על 588 ונמקם אותו 470 פיקסלים ימינה ו-100 למטה
-    game_window.geometry('576x588+470+70')
+    window.geometry('576x588+470+70')
 
     # יצירת תפריט:
-    menu = Menu(master=game_window)  # נשייך תפריט לחלון שלנו
-    game_window.config(menu=menu)  # נשייך לחלון שלנו את התפריט במקום למקם אותו, החלון ממקם בעצמו את התפריט
-    menu.add_command(label="Restart game", command=lambda: restart(game_window))  # נוסיף פעולה
+    menu = Menu(master=window)  # נשייך תפריט לחלון שלנו
+    window.config(menu=menu)  # *נשייך* לחלון שלנו את התפריט במקום למקם אותו, החלון ממקם בעצמו את התפריט
+    menu.add_command(label="Restart game", command=lambda: restart(window))  # נוסיף פעולה
+    #
+    # # יצירת פריים של מידע על המשחק
+    # # txt_frame = Frame(master=window)
+    # label = Label(master=window, padx=10, font=("Great Vibes", 40, "italic"), text="X Turn")
+    # label.pack(side=BOTTOM)
+    # # txt_frame.pack(side=TOP)
 
-    restart(game_window)  # הכנת הכפתורים למשחק והגדרת המשתנים
+    # יצירת פריים  המשחק
+    game_frame = Frame(master=window)
+    game_frame.pack(side=TOP)
 
-    game_window.mainloop()  # הרצת החלון
+    restart(game_frame)  # הכנת הכפתורים למשחק והגדרת המשתנים
+
+    window.mainloop()  # הרצת החלון
