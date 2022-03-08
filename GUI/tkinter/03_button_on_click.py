@@ -14,7 +14,9 @@ def on_click():
         btn.pack(pady=20)
 
     else:
+        btn['image'] = ''  # חייבים למחוק את התמונה שהייתה כדי לערוך את הטקסט
         btn['text'] = 'Click here!'
+        # btn['image'] = ''  # אם נבצע את השורה הזו אחרי שנערוך את את הטקסט נקבל שגיאה!
         btn['padding'] = 0
 
 

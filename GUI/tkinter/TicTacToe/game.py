@@ -81,4 +81,4 @@ if __name__ == '__main__':
 
     restart(game_window)  # הכנת הכפתורים למשחק והגדרת המשתנים
 
-    game_window.mainloop()  #
+    game_window.mainloop()  # הרצת החלון
