@@ -39,6 +39,7 @@ def fib_improved(n: int):
     fibs = [0, 1]
     for i in range(2, n):  # i = 2
         fibs.append(fibs[i-1] + fibs[i-2])
+    print(fibs)
     return fibs[n-1]
 
 
@@ -55,14 +56,26 @@ n = 24
 start_time = time.time()
 
 # Recursive:
-print(f'Calculating fibonacci({n})')
-print("============================")
-print(fibonacci(n))
-print(f'The time to calculate fibonacci({n}) is {time.time() - start_time}')
+# print(f'Calculating fibonacci({n})')
+# print("============================")
+# print(fibonacci(n))
+# print(f'The time to calculate fibonacci({n}) is {time.time() - start_time}')
+#
+# # Improved:
+# start_time = time.time()
+# print(f'Calculating fibonacci({n})  (Improved!)')
+# print("============================")
+# print(fib_improved(n))
+# print(f'The time to calculate fibonacci({n}) is {time.time() - start_time}')
 
-# Improved:
-start_time = time.time()
-print(f'Calculating fibonacci({n})  (Improved!)')
-print("============================")
-print(fib_improved(n))
-print(f'The time to calculate fibonacci({n}) is {time.time() - start_time}')
+def fib_list(n: int):
+    fibs = [0, 1]
+    for i in range(2, n):  # i = 2
+        fibs.append(fibs[i-1] + fibs[i-2])
+    return fibs
+
+from matplotlib import pyplot as plt
+
+fibs = fib_list(n=24)
+plt.plot(fibs)
+plt.show()

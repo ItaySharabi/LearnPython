@@ -1,9 +1,13 @@
-# def == define == להגדיר
 
-def func1(x: int):  # בשורה זו מוגדרת פונקציה שמקבלת פרמטר x כלשהו ומחזירה None
+def func1(x):  # בשורה זו מוגדרת פונקציה שמקבלת פרמטר x כלשהו ומחזירה None
     x = x + 1  # הפונקציה מבצעת חישוב מתמטי כלשהו
-    print(x)   # (לרוב לא מדפיסה כלום)
-    return x   # מחזירה את התוצאה לשורה שקראה לפונקציה
+    # print(x)   # (לרוב לא מדפיסה כלום)
+    return x  # מחזירה את התוצאה לשורה שקראה לפונקציה
+
+
+def func1_with_list(x):
+    x.append(x.pop())
+    return x
 
 
 def func2(x):
@@ -18,5 +22,4 @@ def do_something(z):
     print(z)
     return z
 
-
-print(do_something([1, 2, 3, 4, 5]))
+# print(do_something([1, 2, 3, 4, 5]))
