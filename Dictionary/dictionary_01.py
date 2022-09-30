@@ -6,9 +6,9 @@
 print("\n-----------------------------------------\n")
 
 # How to create a dictionary?
-# d = {}                             # Empty list
+# d = {}                             # Empty dictionary
 # my_dictionary = {"key1": "value1", "key2": 30} # Initialized list
-dictionary = dict(a=1, b=2, c=3, d=4)  # Python's built-in function to create lists
+dictionary = dict(a=1, b=2, c=3, d=4)  # Python's built-in function to create dictionaries
 print(f"my_map = {dictionary}")
 
 print("\n-----------------------------------------\n")
